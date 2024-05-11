@@ -1,0 +1,80 @@
+#include <16f887.h>
+#device adc=10
+#fuses hs
+#use delay(clock=20m)
+
+#define ssdo   pin_c6
+#define ssck   pin_c5
+#define rck    pin_c7
+unsigned int8 i, j;
+unsigned int8 leg_7seg[4] = {0xff, 0xff, 0xff, 0xff};
+unsigned int8 scan_code[5] = {0x08, 0x04, 0x02, 0x01}; 
+
+const unsigned char ma7doan[16]= {
+   0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,        
+   0x80,0x90,0x88,0x83,0xc6,0xa1,0x86,0x8e};
+
+void put_1byte(unsigned int8 x)
+{
+   unsigned int8   sb;   
+   #bit msb  = x.7
+   for (sb=0; sb<8;sb++)
+   {                                                 
+      output_bit(ssdo,msb);    
+      output_low(ssck); 
+      output_high(ssck);
+      x= x<<1;         
+   }
+}
+
+
+void led7seg_display()
+{                                                                  
+   for(i = 0; i < 4; i++)
+   {
+      output_low(rck);
+      put_1byte(leg_7seg[i]);   
+      put_1byte(scan_code[i]);
+      output_high(rck);
+      
+      delay_ms(1);  
+      
+      output_low(rck);
+      put_1byte(0xff);   
+      put_1byte(0);
+      output_high(rck);
+   }
+}  
+
+unsigned int16 tempt;
+
+void main()
+{
+   set_tris_c(0);
+   set_tris_e(0x01);
+   setup_adc(adc_clock_div_32);        
+   setup_adc_ports(san5|vss_vdd); 
+   set_adc_channel(5);
+   tempt = 0;
+   while(true)
+   {
+//!      tempt = read_adc()/2.046;
+//!      leg_7seg[3] = 0xff -1 -8 -16 -32;
+//!      leg_7seg[2] = 0xff-1 - 2 -32 -64; 
+//!      leg_7seg[1] = ma7doan[tempt%10%10];
+//!      leg_7seg[0] = ma7doan[tempt/10%10];
+//!      led7seg_display();
+  
+      output_low(rck);
+      put_1byte(0xc0;   
+      put_1byte(0x08);
+      output_high(rck);
+      
+      delay_ms(1);  
+      
+      output_low(rck);
+      put_1byte(0xff);   
+      put_1byte(0);
+      output_high(rck);
+   }
+}

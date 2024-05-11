@@ -1,0 +1,206 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @TRIS_C
+028-030 time_w
+031-039 time_r
+03A     gt_mod
+03B     bdn1
+03C     bdn2
+03D     bdn3
+03E     i
+03F-042 leg_7seg
+043-047 scan_code
+048-049 tempt
+04A-04B temSet
+04C.0   statusLedWarn
+04D     phim_cd.pin
+04D     ds1307_getTime.i
+04D     ds1307_thoi_gian.j
+04D     tang_or_giam_so_bcd.x
+04D     ds1307_cap_nhat_time.sel
+04D     ds1307_luu_vao_ds.dcdt
+04D-050 @SFTOI.P1
+04D     displayTempt.@SCRATCH1
+04D     displayTemptSet.@SCRATCH1
+04D     displayDate.@SCRATCH1
+04D     displayTime.@SCRATCH1
+04E     tang_or_giam_so_bcd.sel
+04E     @READBITA.P1
+04E     @WRITEBITA.P2
+04E     ds1307_cap_nhat_time.i
+04E     ds1307_luu_vao_ds.dt
+04E     ds1307_thoi_gian.i
+04E     @delay_ms1.P1
+04E     ds1307_getTime.@SCRATCH1
+04E     led7seg_display.@SCRATCH1
+04E     displayTempt.@SCRATCH2
+04E     displayTemptSet.@SCRATCH2
+04F     tang_or_giam_so_bcd.y
+04F-050 @DIV1616.P1
+04F     put_1byte.x
+04F-050 @READBITA.P1
+04F-052 @DIVFF.P2
+04F-050 @ITOF.P3
+04F     @WRITEBITA.P4
+04F.7   put_1byte.msb
+04F     ds1307_cap_nhat_time.@SCRATCH1
+04F     ds1307_thoi_gian.@SCRATCH1
+04F     ds1307_getTime.@SCRATCH2
+050     tang_or_giam_so_bcd.dv
+050     @I2C_WRITE_1.P1
+050-051 @WRITEBITA.P2
+050     put_1byte.sb
+050     ds1307_thoi_gian.@SCRATCH2
+051     @I2C_READ_1.P1
+051     tang_or_giam_so_bcd.ch
+051-052 @DIV1616.P1
+052     tang_or_giam_so_bcd.v
+052     @I2C_READ_1.@SCRATCH1
+053-056 @DIVFF.P1
+053     @DIV88.P2
+053     @MUL88.P3
+053     @I2C_READ_1.@SCRATCH2
+053     tang_or_giam_so_bcd.@SCRATCH1
+053     @DIV1616.@SCRATCH1
+054     @DIV88.P1
+054     @MUL88.P2
+055     @DIV88.@SCRATCH1
+057     @DIVFF.@SCRATCH1
+058     @DIVFF.@SCRATCH2
+059     @DIVFF.@SCRATCH3
+05A     @DIVFF.@SCRATCH4
+05B     @DIVFF.@SCRATCH5
+05C     @DIVFF.@SCRATCH6
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07F     @INTERRUPT_AREA
+0FF     @INTERRUPT_AREA
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
+
+ROM Allocation:
+000031  ma7doan.call
+000035  ma7doan.data
+000045  itr_timer1
+000051  @I2C_WRITE_1
+0000AD  @I2C_READ_1
+000101  ds1307_setup
+000103  ds1307_thoi_gian
+000187  ds1307_cap_nhat_time
+0001E6  ds1307_getTime
+000265  @WRITEBITA
+000285  @READBITA
+00029C  @delay_ms1
+0002B0  put_1byte
+0002D0  led7seg_display
+000308  phim_cd
+000343  phim_mod
+000353  alarmHighTempt
+00036D  @DIV1616
+000392  displayDate
+0003AD  displayTime
+0003C8  normalDisplay
+0003CC  displayTempt
+0003DB  @ITOF
+000407  @DIVFF
+0004D8  @SFTOI
+000549  @DIV88
+00055E  tang_or_giam_so_bcd
+000569  @MUL88
+0005AE  ds1307_luu_vao_ds
+0005F6  displayBlinkSetButtons
+0005FA  setButtonAlls
+00061C  displayTemptSet
+00064E  tang_ngay
+000666  giam_ngay
+000683  tang_thang
+00069B  giam_thang
+0006B8  tang_gio
+0006CF  giam_gio
+0006ED  tang_phut
+000704  giam_phut
+00071C  offSetButton
+000747  MAIN
+000747  @cinit1
+00075D  @cinit2
+
+Project Directory:
+    E:\CCS VXL\CALENDER_PROJECT\
+
+Project Files:
+    main.c                                                  [09-Apr-24 13:05  CRC=FD57BE24]
+    C:\Program Files (x86)\PICC\Devices\16f887.h            [12-Nov-13 14:35  CRC=6CB1A611]
+    ds1307.c                                                [09-Apr-24 10:22  CRC=10897F60]
+
+Source signature=8B1C62F5
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

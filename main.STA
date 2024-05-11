@@ -1,0 +1,89 @@
+
+ROM used:   2012/8192 (25%)
+            2012/8192 (25%) including unused fragments
+
+            1.6 Average locations per line
+            7.7 Average locations per statement
+
+RAM used:   50/368 (14%) at main() level
+            66/368 (18%) worst case
+
+Stack used: 5 worst case (4 in main + 1 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  244   152  58  main.c
+  768     0   0  C:\Program Files (x86)\PICC\Devices\16f887.h
+  226   108  42  ds1307.c
+----- -----
+ 1238   260 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     20   1    1             @delay_ms1
+0     84   4    3             @I2C_READ_1
+0     92   5    1             @I2C_WRITE_1
+ Inline         3   262  4.6  ds1307_cap_nhat_time
+ Inline         4   280  4.0  ds1307_thoi_gian
+0    229  11    0    80  2.4  ds1307_setup
+0    127   6    3   262  3.7  ds1307_getTime
+0     72   4    2   104  1.7  ds1307_luu_vao_ds
+0     80   4    7   439  9.5  tang_or_giam_so_bcd
+ Inline         2             @MUL88
+0     21   1    3             @DIV88
+ Inline         0   171  4.0  tang_phut
+ Inline         0   171  4.0  tang_gio
+ Inline         0   171  4.0  tang_thang
+ Inline         0   171  4.0  tang_ngay
+ Inline         0   171  4.0  giam_phut
+ Inline         0   171  4.0  giam_gio
+ Inline         0   171  4.0  giam_thang
+ Inline         0   171  4.0  giam_ngay
+0     20   1    0             @const677
+0     12   1    0    52  1.4  itr_timer1
+0     32   2    2   234  4.3  put_1byte
+0     56   3    1   282  3.7  led7seg_display
+ Inline         2   325  3.6  displayTempt
+ Inline         2             @ITOF
+ Inline        14             @DIVFF
+ Inline         4             @SFTOI
+0     37   2    5             @DIV1616
+ Inline         2   183  3.6  displayTemptSet
+0     27   1    1   267  3.7  displayDate
+0     27   1    1   267  3.7  displayTime
+0    385  19    0   156  3.4  normalDisplay
+0     59   3    1   185  3.1  phim_cd
+0     32   2    6             @WRITEBITA
+0     23   1    5             @READBITA
+0     16   1    0    80  2.7  phim_mod
+ Inline         0   828  5.3  setButtonAlls
+ Inline         0   542  3.8  offSetButton
+0    337  17    0   110  3.3  displayBlinkSetButtons
+0     26   1    0    82  2.8  alarmHighTempt
+0    149   7    0   612  5.7  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               29
+    Statements              260
+    Comments                160
+    Volume (V)              13434
+    Difficulty (D)          111.3
+    Effort to implement (E) 1495680
+    Time to implement (T)   23 hours, 5 minutes
+    Est Delivered Bugs (B)  4
+    Cyclomatic Complexity   48
+    Maintainability (MI)    79
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-00030    45  0  
+00031-007FF  1963  36  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

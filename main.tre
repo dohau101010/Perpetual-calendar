@@ -1,0 +1,145 @@
+ÀÄmain
+   ÃÄMAIN  0/149  Ram=0
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄds1307_setup  0/229  Ram=0
+   ³  ³  ÃÄds1307_thoi_gian  (Inline)  Ram=4
+   ³  ³  ³  ÃÄ@I2C_WRITE_1  0/92  Ram=1
+   ³  ³  ³  ÃÄ@I2C_WRITE_1  0/92  Ram=1
+   ³  ³  ³  ÃÄ@I2C_WRITE_1  0/92  Ram=1
+   ³  ³  ³  ÃÄ@I2C_READ_1  0/84  Ram=3
+   ³  ³  ³  ÀÄ@I2C_READ_1  0/84  Ram=3
+   ³  ³  ÀÄds1307_cap_nhat_time  (Inline)  Ram=3
+   ³  ³     ÃÄ@I2C_WRITE_1  0/92  Ram=1
+   ³  ³     ÃÄ@I2C_WRITE_1  0/92  Ram=1
+   ³  ³     ÃÄ@I2C_WRITE_1  0/92  Ram=1
+   ³  ³     ÀÄ@I2C_WRITE_1  0/92  Ram=1
+   ³  ÃÄds1307_setup  0/229  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄds1307_getTime  0/127  Ram=3
+   ³  ³  ÃÄ@I2C_WRITE_1  0/92  Ram=1
+   ³  ³  ÃÄ@I2C_WRITE_1  0/92  Ram=1
+   ³  ³  ÃÄ@I2C_WRITE_1  0/92  Ram=1
+   ³  ³  ÃÄ@I2C_READ_1  0/84  Ram=3
+   ³  ³  ÀÄ@I2C_READ_1  0/84  Ram=3
+   ³  ÃÄphim_mod  0/16  Ram=0
+   ³  ³  ÀÄphim_cd  0/59  Ram=1
+   ³  ³     ÃÄ@WRITEBITA  0/32  Ram=6
+   ³  ³     ÃÄ@READBITA  0/23  Ram=5
+   ³  ³     ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ³     ÃÄ@WRITEBITA  0/32  Ram=6
+   ³  ³     ÃÄ@READBITA  0/23  Ram=5
+   ³  ³     ÃÄ@WRITEBITA  0/32  Ram=6
+   ³  ³     ÃÄ@READBITA  0/23  Ram=5
+   ³  ³     ÀÄled7seg_display  0/56  Ram=1
+   ³  ³        ÃÄput_1byte  0/32  Ram=2
+   ³  ³        ÃÄput_1byte  0/32  Ram=2
+   ³  ³        ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ³        ÃÄput_1byte  0/32  Ram=2
+   ³  ³        ÀÄput_1byte  0/32  Ram=2
+   ³  ÃÄds1307_getTime  0/127  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄalarmHighTempt  0/26  Ram=0
+   ³  ÃÄnormalDisplay  0/385  Ram=0
+   ³  ³  ÃÄdisplayTempt  (Inline)  Ram=2
+   ³  ³  ³  ÃÄ@ITOF  (Inline)  Ram=2
+   ³  ³  ³  ÃÄ@DIVFF  (Inline)  Ram=14
+   ³  ³  ³  ÃÄ@SFTOI  (Inline)  Ram=4
+   ³  ³  ³  ÃÄ@DIV1616  0/37  Ram=5
+   ³  ³  ³  ÃÄ@DIV1616  0/37  Ram=5
+   ³  ³  ³  ÃÄ@const677  0/20  Ram=0
+   ³  ³  ³  ÃÄ@DIV1616  0/37  Ram=5
+   ³  ³  ³  ÃÄ@DIV1616  0/37  Ram=5
+   ³  ³  ³  ÀÄ@const677  0/20  Ram=0
+   ³  ³  ÃÄdisplayDate  0/27  Ram=1
+   ³  ³  ³  ÃÄ@const677  0/20  Ram=0
+   ³  ³  ³  ÃÄ@const677  0/20  Ram=0
+   ³  ³  ³  ÃÄ@const677  0/20  Ram=0
+   ³  ³  ³  ÀÄ@const677  0/20  Ram=0
+   ³  ³  ÀÄdisplayTime  0/27  Ram=1
+   ³  ³     ÃÄ@const677  0/20  Ram=0
+   ³  ³     ÃÄ@const677  0/20  Ram=0
+   ³  ³     ÃÄ@const677  0/20  Ram=0
+   ³  ³     ÀÄ@const677  0/20  Ram=0
+   ³  ÃÄdisplayBlinkSetButtons  0/337  Ram=0
+   ³  ³  ÃÄsetButtonAlls  (Inline)  Ram=0
+   ³  ³  ³  ÃÄphim_cd  0/59  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄphim_cd  0/59  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄdisplayTemptSet  (Inline)  Ram=2
+   ³  ³  ³  ³  ÃÄ@DIV1616  0/37  Ram=5
+   ³  ³  ³  ³  ÃÄ@const677  0/20  Ram=0
+   ³  ³  ³  ³  ÃÄ@DIV1616  0/37  Ram=5
+   ³  ³  ³  ³  ÀÄ@const677  0/20  Ram=0
+   ³  ³  ³  ÃÄphim_cd  0/59  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄtang_ngay  (Inline)  Ram=0
+   ³  ³  ³  ³  ÃÄtang_or_giam_so_bcd  0/80  Ram=7
+   ³  ³  ³  ³  ³  ÃÄ@MUL88  (Inline)  Ram=2
+   ³  ³  ³  ³  ³  ÃÄ@DIV88  0/21  Ram=3
+   ³  ³  ³  ³  ³  ÀÄ@DIV88  0/21  Ram=3
+   ³  ³  ³  ³  ÀÄds1307_luu_vao_ds  0/72  Ram=2
+   ³  ³  ³  ³     ÃÄ@I2C_WRITE_1  0/92  Ram=1
+   ³  ³  ³  ³     ÃÄ@I2C_WRITE_1  0/92  Ram=1
+   ³  ³  ³  ³     ÀÄ@I2C_WRITE_1  0/92  Ram=1
+   ³  ³  ³  ÃÄphim_cd  0/59  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄgiam_ngay  (Inline)  Ram=0
+   ³  ³  ³  ³  ÃÄtang_or_giam_so_bcd  0/80  Ram=7
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÀÄds1307_luu_vao_ds  0/72  Ram=2
+   ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ÃÄdisplayDate  0/27  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄphim_cd  0/59  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄtang_thang  (Inline)  Ram=0
+   ³  ³  ³  ³  ÃÄtang_or_giam_so_bcd  0/80  Ram=7
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÀÄds1307_luu_vao_ds  0/72  Ram=2
+   ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ÃÄphim_cd  0/59  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄgiam_thang  (Inline)  Ram=0
+   ³  ³  ³  ³  ÃÄtang_or_giam_so_bcd  0/80  Ram=7
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÀÄds1307_luu_vao_ds  0/72  Ram=2
+   ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ÃÄdisplayDate  0/27  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄphim_cd  0/59  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄtang_gio  (Inline)  Ram=0
+   ³  ³  ³  ³  ÃÄtang_or_giam_so_bcd  0/80  Ram=7
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÀÄds1307_luu_vao_ds  0/72  Ram=2
+   ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ÃÄphim_cd  0/59  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄgiam_gio  (Inline)  Ram=0
+   ³  ³  ³  ³  ÃÄtang_or_giam_so_bcd  0/80  Ram=7
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÀÄds1307_luu_vao_ds  0/72  Ram=2
+   ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ÃÄdisplayTime  0/27  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄphim_cd  0/59  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄtang_phut  (Inline)  Ram=0
+   ³  ³  ³  ³  ÃÄtang_or_giam_so_bcd  0/80  Ram=7
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÀÄds1307_luu_vao_ds  0/72  Ram=2
+   ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ÃÄphim_cd  0/59  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄgiam_phut  (Inline)  Ram=0
+   ³  ³  ³  ³  ÃÄtang_or_giam_so_bcd  0/80  Ram=7
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÀÄds1307_luu_vao_ds  0/72  Ram=2
+   ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ÀÄdisplayTime  0/27  Ram=1
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÀÄoffSetButton  (Inline)  Ram=0
+   ³  ÀÄled7seg_display  0/56  Ram=1
+   ³     ÀÄ*
+   ÀÄitr_timer1  0/12  Ram=0
